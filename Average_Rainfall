@@ -1,0 +1,43 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    int numYears = 0;
+    const int MONTH = 12;
+    float totalRainfall = 0.0f;
+    float rainfall = 0.0f;
+    float avgRainfall = 0.0f;
+
+    cout <<"Please enter number of years" << endl;
+    cin >> numYears;
+
+    while (numYears < 1)
+    {
+        cout << "Number of years must be at least 1. Please re-enter ";
+        cin >> numYears;
+    }
+
+   for (int i = 1; i <= numYears; i++)
+   {
+       for(int months = 1; months <= MONTH; months++)
+       {
+           cout << "Please enter the rainfall for" << months <<" month: ";
+           cin >> rainfall;
+
+           while (rainfall < 0)
+           {
+               cout << "The rainfall cannot be negative number. Please re-enter:";
+               cin >> rainfall;
+           }
+
+           totalRainfall += rainfall;
+        }
+    }
+    cout << "\nNumber of months: " << numYears * MONTH << endl;
+    cout << "Total rainfall: " << setprecision(2) << fixed << totalRainfall << "inches" <<endl;
+    cout << "Average rainfall:" << setprecision(2) << fixed << totalRainfall / (numYears * MONTH)<<"inches";
+
+    return 0;
+    }
