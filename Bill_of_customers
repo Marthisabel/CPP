@@ -1,0 +1,68 @@
+//This program calculate the bill of customers
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int adults, child;
+double adulMeal, childMeal, dessert, roomFee, tax, totalAdul, totalChild, totalDessert, foodCost, balance, tipTax, feeRoom, lessDeposit, totalAdult;
+
+// Get the number of Adults to be served
+cout << "How many adults to be served?\n";
+cin >> adults;
+
+// Get the number of children to be served
+cout << "How many children to be served?\n";
+cin >> child;
+
+// Cost per adult without dessert
+cout << "What is the cost per adult without dessert\n";
+cin >> adulMeal;
+
+// Cost per child without dessert
+
+childMeal = 0.60 * adulMeal;
+
+// Cost for dessert
+cout << "Mow much is the cost per dessert\n";
+cin >> dessert;
+
+// Cost per room fee
+cout << "How much is per room fee?\n";
+cin >> roomFee;
+
+// Tip and tax rate
+cout << "What is the porcentage for tip and tax?" <<endl;
+cin >> tax;
+
+//Calculate the total cost for adult meals
+totalAdul = adulMeal * adults;
+cout << "The total cost for adult meals is" << totalAdul <<endl;
+
+// Calculate the total cost for child meals
+cout << "The total cost for child meals is" << totalChild<< endl;
+totalChild = childMeal * child;
+
+// Total cost for dessert
+totalDessert = dessert * 0.01;
+cout << "The total cost for dessert is " << totalDessert<< endl;
+
+// Total food cost
+cout << "The total food cost is" << foodCost<< endl;
+foodCost = totalAdul + totalDessert + totalChild;
+
+//Plus tips and tax
+cout << "Plus tips and tax is" << tax<< endl;
+
+// Plus room fee
+cout << "Plus room fee is" << roomFee<< endl;
+
+//Less deposit
+cout << "The less deposit is";
+cin >> lessDeposit;
+//Balance due
+balance = totalAdult + totalChild + totalDessert + foodCost + tipTax + feeRoom + lessDeposit;
+cout <<"The balance due is" << balance << endl;
+
+return 0;
+}
