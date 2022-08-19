@@ -10,7 +10,7 @@ int main()
     int smallest, largest;
     int i;
 
-    for (i=1; i<=5x; i++)
+    for (i=1; i<=5; i++)
     {
         cout<< "Please enter an integer number" << endl;
         cin>> x;
