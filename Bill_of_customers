@@ -24,41 +24,41 @@ cin >> adulMeal;
 childMeal = 0.60 * adulMeal;
 
 // Cost for dessert
-cout << "Mow much is the cost per dessert\n";
+cout << "How much is the cost per dessert?:\n";
 cin >> dessert;
 
 // Cost per room fee
-cout << "How much is per room fee?\n";
+cout << "How much is per room fee?:\n";
 cin >> roomFee;
 
 // Tip and tax rate
-cout << "What is the porcentage for tip and tax?" <<endl;
+cout << "What is the porcentage for tip and tax?:" <<endl;
 cin >> tax;
 
 //Calculate the total cost for adult meals
 totalAdul = adulMeal * adults;
-cout << "The total cost for adult meals is" << totalAdul <<endl;
+cout << "The total cost for adult meals is: " << totalAdul <<endl;
 
 // Calculate the total cost for child meals
-cout << "The total cost for child meals is" << totalChild<< endl;
+cout << "The total cost for child meals is: " << totalChild<< endl;
 totalChild = childMeal * child;
 
 // Total cost for dessert
 totalDessert = dessert * 0.01;
-cout << "The total cost for dessert is " << totalDessert<< endl;
+cout << "The total cost for dessert is:" << totalDessert<< endl;
 
 // Total food cost
-cout << "The total food cost is" << foodCost<< endl;
+cout << "The total food cost is: " << foodCost<< endl;
 foodCost = totalAdul + totalDessert + totalChild;
 
 //Plus tips and tax
-cout << "Plus tips and tax is" << tax<< endl;
+cout << "The tips and sale tax are: " << tax<< endl;
 
 // Plus room fee
-cout << "Plus room fee is" << roomFee<< endl;
+cout << "The room fee is: " << roomFee<< endl;
 
 //Less deposit
-cout << "The less deposit is";
+cout << "The less for deposit is:";
 cin >> lessDeposit;
 //Balance due
 balance = totalAdult + totalChild + totalDessert + foodCost + tipTax + feeRoom + lessDeposit;
